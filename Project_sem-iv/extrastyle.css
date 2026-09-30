@@ -1,0 +1,105 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body {
+    height:100%;
+    width:100%;
+}
+.main{
+    height: 100%;
+    width:100%;
+    display: flex;
+}
+.left{
+    height: 100%;
+    width:50%;
+    background: red;
+    position: relative;
+}
+.right{
+    height: 100%;
+    width: 50%;
+    background: blue;
+    position: relative;
+}
+@media (max-width:600px) {
+    .main{
+        flex-direction: column;
+    }
+    
+}
+
+
+
+
+
+/*.left .up h4{
+    padding:10px 20px;
+    border:1px solid black;
+    border-radius: 50px;
+    font-weight:500;
+    color:#000000;
+    transition: all ease 0.3s;
+    position: relative;
+    font-size: 18px;
+}
+.left .up h4::after{
+    content: "";
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-color: black;
+    left:0;
+    bottom:-100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+}
+.left .up h4:hover::after{
+    bottom:0;
+    border-radius: 0;
+}
+.left .up h4 a{
+    color:black;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+.left .up h4:hover a{
+    color:white;
+}*/
+
+/*.left .up h4 a{
+    margin-bottom: -1vw;
+    padding: 0.6vw 0.7vw;
+    border: 0.2vw solid #505050;
+    border-radius: 5vw;
+    font-family: helvetica;
+    font-weight: 600;
+    color: #505050;
+    font-size: 1.23vw;
+    position: relative;
+    transition: all ease 0.5s;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateZ(3vw);
+    animation: fade 2s forwards;
+}
+.left .up h4 a::after{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color: #505050;
+    left: 0;
+    bottom:-100%;
+    border-radius: 5vw;
+    transition: all ease 0.5s;
+}
+.left .up h4 a:hover::after{
+    bottom:0;
+    border-radius: 0;
+}
+.left .up h4 a:hover{
+    color:#ffffff;
+}*/

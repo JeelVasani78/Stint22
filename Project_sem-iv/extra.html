@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked H3 with Animation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        h3 {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            border: 2vw solid #3498db;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            animation: pulse 2s infinite alternate;
+        }
+
+        h3:hover {
+            background-color: #3498db;
+            color: #fff;
+            transform: scale(1.1);
+            animation: none; /* Disable the pulsating animation on hover */
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button class="blob-btn">
+          Blob Button
+          <span class="blob-btn__inner">
+            <span class="blob-btn__blobs">
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+            </span>
+          </span>
+        </button>
+        <br/>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+
+</body>
+</html>
+
+
+<!--<div id="preloader"></div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6VbETTS67rM?si=Tq_FZbkkbR8r_QkX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6VbETTS67rM?si=Tq_FZbkkbR8r_QkX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6VbETTS67rM?si=Tq_FZbkkbR8r_QkX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load",function(){
+            loader.style.display="none";
+        })
+    </script>
+
+    #preloader{
+      height:100%;
+      width:100%;
+      position: fixed;
+      background: #ffff url('./loader4.gif') no-repeat center;
+      background-size: 15%;
+      z-index: 100;
+  }
+-->
+
+<!--<?php
+error_reporting(0);
+session_start();
+if (!isset($_SESSION["user_id"])) {
+    header('Location: login.php');
+    exit();
+}
+$user_id=$_SESSION["user_id"];
+$email=$_SESSION["email"];
+if(isset($_POST['submit'])){
+    $server="localhost";
+    $username="root";
+    $password="";
+    $db="stint22";
+    $con=mysqli_connect($server,$username,$password,$db);
+    if($con)
+    {
+        $task_title=$_POST['task_title'];
+        $task_desc=$_POST['task_desc'];
+        $f_time=$_POST['f_time'];
+        $t_time=$_POST['t_time'];
+        $d_date=$_POST['d_date'];
+
+        $q1="insert into task_master(user_id,date,s_time,e_time,title,task_desc) values('$user_id','$d_date','$f_time','$t_time','$task_title','$task_desc')";
+        $insert=mysqli_query($con,$q1);
+        if($insert)
+        {
+            <script>alert('Task Added Successfully');</script>
+        }
+        else
+        {
+            <script>alert('Error Adding Task')</script>
+        }
+        header('Location:b_dashboard.html');
+    }
+}
+?>-->
